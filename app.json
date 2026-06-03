@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "PRAHARI",
+    "slug": "prahari",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0a0a"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0a0a0a"
+      },
+      "package": "com.prahari.attendance",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.INTERNET"
+      ],
+      "minSdkVersion": 26
+    },
+    "ios": {
+      "supportsTabletMode": false,
+      "bundleIdentifier": "com.prahari.attendance",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "PRAHARI needs camera access for face recognition attendance.",
+        "NSFaceIDUsageDescription": "PRAHARI uses Face ID for secure biometric vault access.",
+        "NSPhotoLibraryUsageDescription": "PRAHARI needs photo library access for enrollment testing.",
+        "NSPhotoLibraryAddUsageDescription": "PRAHARI needs permission to save photos."
+      }
+    },
+    "plugins": [
+      "react-native-tflite",
+      "react-native-vision-camera",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "PRAHARI needs photo library access for enrollment testing.",
+          "cameraPermission": "PRAHARI needs camera access for live capture."
+        }
+      ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "prahari-phase1"
+      }
+    },
+    "scheme": "prahari"
+  }
+}
