@@ -10,11 +10,14 @@ module.exports = function (api) {
           alias: {
             '@hooks': './src/hooks',
             '@utils': './src/utils',
-            '@screens': './src/screens',
+            '@services': './src/services',
+            '@store': './src/store',
             '@components': './src/components',
           },
         },
       ],
+      // react-native-reanimated MUST be last
+      'react-native-reanimated/plugin',
     ],
   };
 };
