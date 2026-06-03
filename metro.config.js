@@ -2,10 +2,10 @@ const { getDefaultConfig } = require('expo/metro-config');
 
 const config = getDefaultConfig(__dirname);
 
-// Allow bundling .tflite and .task model files as assets
+// Allow bundling TFLite models + MediaPipe task files as assets
 config.resolver.assetExts.push('tflite', 'task', 'bin', 'ort');
 
-// Needed for @shopify/react-native-skia
+// Module resolution for reanimated + skia
 config.resolver.sourceExts = ['js', 'jsx', 'json', 'ts', 'tsx', 'cjs', 'mjs'];
 
 module.exports = config;
